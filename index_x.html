@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptPractice</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="box" id="target1"></div>
+    <div class="box" id="target2"></div>
+    <div class="box" id="target3"></div>
+
+    <script>
+        'use strict';
+
+        const target1 = document.getElementById('target1');   //定数
+        const target2 = document.getElementById('target2');   //定数
+        const target3 = document.getElementById('target3');   //定数
+
+        target1.addEventListener('click', () => {     //アロー関数
+            target1.classList.toggle('circle');   //再度クリックで戻る
+        });
+        target2.addEventListener('click', () => {     //アロー関数
+            target2.classList.toggle('circle');   //再度クリックで戻る
+        });
+        target3.addEventListener('click', () => {     //アロー関数
+            target3.classList.toggle('circle');   //再度クリックで戻る
+        });
+
+        // 定数を使わない場合
+        // document.getElementById('target').addEventListener('click', () => {     //アロー関数
+            // document.getElementById('target').style.background = 'pink';     //styleを使わない場合
+            // document.getElementById('target').style.borderRadius = '50%';     //styleを使わない場合
+            // document.getElementById('target').classList.add('circle');   //一回クリックのみ
+            // document.getElementById('target').classList.toggle('circle');   //再度クリックで戻る
+        // });
+    </script>
+</body>
+</html>
